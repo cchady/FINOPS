@@ -1,0 +1,22 @@
+{
+  "name": "btpresourceconsumption.cpkg",
+  "version": "2.3.1",
+  "author": "SAP SE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com:SAP-samples/workzone-content-package-templates.git"
+  },
+  "scripts": {
+    "build": "node scripts/pull.js && node scripts/build.js",
+    "validate": "node scripts/validate.js"
+  },
+  "devDependencies": {
+    "@ui5/cli": "^4",
+    "bestzip": "^2",
+    "fs-extra": "^11",
+    "glob": "^13",
+    "handlebars": "^4",
+    "properties-reader": "^3",
+    "rimraf": "^6"
+  }
+}

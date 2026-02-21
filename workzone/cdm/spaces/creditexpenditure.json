@@ -1,0 +1,23 @@
+{
+  "_version": "3.1.0",
+  "identification": {
+    "id": "space_4_creditexpenditure",
+    "title": "Credit Expenditure",
+    "entityType": "space"
+  },
+  "payload": {
+    "spaceConfig": {
+      "sortNumber": 400
+    },
+    "contentNodes": [
+      {
+        "type": "workpage",
+        "id": "page_1_app.billingdifferences"
+      },
+      {
+        "type": "workpage",
+        "id": "page_2_sac.creditprojection"
+      }
+    ]
+  }
+}

@@ -31,7 +31,7 @@
           "semanticObject": "billing",
           "action": "display",
           "title": "{{appTitle}}",
-          "subTitle": "{{appSubtitle}}",
+          "subTitle": "{{appSubTitle}}",
           "icon": "sap-icon://compare-2",
           "signature": {
             "parameters": {},

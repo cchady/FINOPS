@@ -218,13 +218,13 @@ service RetrievalService {
         };
 
     function downloadMeasuresForToday()                                returns many {
-        message         : String;
-        numericSeverity : Integer;
+        message  : String;
+        numValue : Integer;
     };
 
     function downloadMeasuresForPastMonths(fromDate: Integer)          returns many {
-        message         : String;
-        numericSeverity : Integer;
+        message  : String;
+        numValue : Integer;
     };
     
     function resetForecastSettings()                                    returns String;

@@ -158,7 +158,7 @@ export default class RetrievalService extends cds.ApplicationService {
                 } catch (e) { warn(String(e)); status.push(String(e)); req.warn(400, status.join('\r\n')) }
             })
 
-            return req.messages
+            return (req.messages ?? []).map((m: any) => ({ message: m.message, numValue: m.numericSeverity }))
         })
 
         /**
@@ -197,7 +197,7 @@ export default class RetrievalService extends cds.ApplicationService {
                 } catch (e) { warn(String(e)); status.push(String(e)); req.warn(400, status.join('\r\n')) }
             })
 
-            return req.messages
+            return (req.messages ?? []).map((m: any) => ({ message: m.message, numValue: m.numericSeverity }))
         })
 
         /**

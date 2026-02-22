@@ -50,9 +50,9 @@ export default class ManageTagsService extends cds.ApplicationService {
                     }, {} as Record<string, number>)
                 )
                 const errorEntries = sum.filter(([k, v]) => v <= 0 || v > 100)
-                errorEntries.length > 0 && req.error(400, errorEntries.map(([k, v]) => `Managed tag '${k}' has allocations that sum up to ${v}%. The sum has to be between 0 and 100%.`).join('\r\n'))
+                errorEntries.length > 0 && req.error(400, errorEntries.map(([k, v]) => `Managed tag '${k}' has allocations that sum up to ${v}%. The sum must be greater than 0 and at most 100%.`).join('\r\n'))
 
-                const warningEntries = sum.filter(([k, v]) => v < 100)
+                const warningEntries = sum.filter(([k, v]) => v > 0 && v < 100)
                 warningEntries.length > 0 && req.warn(warningEntries.map(([k, v]) => `Managed tag '${k}' has allocations that sum up to ${v}%. Your data is saved, but know it is incomplete as long as it is below 100%.`).join('\r\n'))
             }
         })

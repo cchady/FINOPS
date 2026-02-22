@@ -92,7 +92,7 @@ export const Settings = {
          * One of these jobs is used to query the history consumption. This parameter specifies from which month to query the history.
          * In the application a user can still load additional data.
          * 
-         * Format: YYYMM
+         * Format: YYYYMM
          */
         initialHistoryLoadMonth: 202310,
         /**
